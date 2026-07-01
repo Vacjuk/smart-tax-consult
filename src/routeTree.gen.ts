@@ -9,9 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SluzbyRouteImport } from './routes/sluzby'
 import { Route as OMneRouteImport } from './routes/o-mne'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SluzbyRoute = SluzbyRouteImport.update({
+  id: '/sluzby',
+  path: '/sluzby',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OMneRoute = OMneRouteImport.update({
   id: '/o-mne',
   path: '/o-mne',
@@ -26,31 +32,42 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/o-mne': typeof OMneRoute
+  '/sluzby': typeof SluzbyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/o-mne': typeof OMneRoute
+  '/sluzby': typeof SluzbyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/o-mne': typeof OMneRoute
+  '/sluzby': typeof SluzbyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/o-mne'
+  fullPaths: '/' | '/o-mne' | '/sluzby'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/o-mne'
-  id: '__root__' | '/' | '/o-mne'
+  to: '/' | '/o-mne' | '/sluzby'
+  id: '__root__' | '/' | '/o-mne' | '/sluzby'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   OMneRoute: typeof OMneRoute
+  SluzbyRoute: typeof SluzbyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sluzby': {
+      id: '/sluzby'
+      path: '/sluzby'
+      fullPath: '/sluzby'
+      preLoaderRoute: typeof SluzbyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/o-mne': {
       id: '/o-mne'
       path: '/o-mne'
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   OMneRoute: OMneRoute,
+  SluzbyRoute: SluzbyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

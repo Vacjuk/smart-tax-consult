@@ -26,7 +26,11 @@ const services = [
   "Jiné",
 ];
 
-export function ContactForm() {
+interface ContactFormProps {
+  defaultService?: string;
+}
+
+export function ContactForm({ defaultService }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const submit = useServerFn(submitInquiry);
 
@@ -39,7 +43,7 @@ export function ContactForm() {
   } = useForm<InquiryFormData>({
     resolver: zodResolver(inquirySchema),
     defaultValues: {
-      service: "",
+      service: defaultService && services.includes(defaultService) ? defaultService : "",
     },
   });
 
