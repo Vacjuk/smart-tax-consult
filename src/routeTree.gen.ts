@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SluzbyRouteImport } from './routes/sluzby'
 import { Route as OMneRouteImport } from './routes/o-mne'
+import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SluzbyRoute = SluzbyRouteImport.update({
@@ -23,6 +24,11 @@ const OMneRoute = OMneRouteImport.update({
   path: '/o-mne',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,30 +37,34 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/kontakt': typeof KontaktRoute
   '/o-mne': typeof OMneRoute
   '/sluzby': typeof SluzbyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/kontakt': typeof KontaktRoute
   '/o-mne': typeof OMneRoute
   '/sluzby': typeof SluzbyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/kontakt': typeof KontaktRoute
   '/o-mne': typeof OMneRoute
   '/sluzby': typeof SluzbyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/o-mne' | '/sluzby'
+  fullPaths: '/' | '/kontakt' | '/o-mne' | '/sluzby'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/o-mne' | '/sluzby'
-  id: '__root__' | '/' | '/o-mne' | '/sluzby'
+  to: '/' | '/kontakt' | '/o-mne' | '/sluzby'
+  id: '__root__' | '/' | '/kontakt' | '/o-mne' | '/sluzby'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KontaktRoute: typeof KontaktRoute
   OMneRoute: typeof OMneRoute
   SluzbyRoute: typeof SluzbyRoute
 }
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OMneRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KontaktRoute: KontaktRoute,
   OMneRoute: OMneRoute,
   SluzbyRoute: SluzbyRoute,
 }
