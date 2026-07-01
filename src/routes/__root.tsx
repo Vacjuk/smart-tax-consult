@@ -135,6 +135,7 @@ function RootComponent() {
         </main>
         <Footer />
       </div>
+      <Toaster position="top-center" richColors />
     </QueryClientProvider>
   );
 }
