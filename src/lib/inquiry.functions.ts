@@ -21,7 +21,7 @@ function createServerSupabaseClient() {
 }
 
 export const submitInquiry = createServerFn({ method: "POST" })
-  .inputValidator((data) => inquirySchema.parse(data as InquiryFormData))
+  .validator((data) => inquirySchema.parse(data as InquiryFormData))
   .handler(async ({ data }) => {
     const supabase = createServerSupabaseClient();
 
