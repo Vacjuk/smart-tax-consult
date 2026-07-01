@@ -104,7 +104,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
         <Label htmlFor="service" className="text-[10px] uppercase font-bold tracking-widest text-brand-primary/50">
           Služba
         </Label>
-        <Select onValueChange={(value) => setValue("service", value)}>
+        <Select value={selectedService} onValueChange={(value) => setValue("service", value)}>
           <SelectTrigger className="bg-white border-0 border-b border-brand-primary/10 rounded-none px-3 py-3 focus:ring-0 focus:border-brand-accent">
             <SelectValue placeholder="Vyberte službu" />
           </SelectTrigger>
