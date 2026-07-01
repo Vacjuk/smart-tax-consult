@@ -39,6 +39,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
     handleSubmit,
     setValue,
     reset,
+    control,
     formState: { errors },
   } = useForm<InquiryFormData>({
     resolver: zodResolver(inquirySchema),
@@ -46,6 +47,8 @@ export function ContactForm({ defaultService }: ContactFormProps) {
       service: defaultService && services.includes(defaultService) ? defaultService : "",
     },
   });
+
+  const selectedService = useWatch({ control, name: "service" });
 
   const onSubmit = async (data: InquiryFormData) => {
     setIsSubmitting(true);
