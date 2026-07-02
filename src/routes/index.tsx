@@ -49,9 +49,9 @@ const pricing = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Marek Valenta — Daňový poradce" },
+      { title: "Andrea Baťková — Daňová poradkyně" },
       { name: "description", content: "Profesionální daňové poradenství pro firmy i jednotlivce." },
-      { property: "og:title", content: "Marek Valenta — Daňový poradce" },
+      { property: "og:title", content: "Andrea Baťková — Daňová poradkyně" },
       { property: "og:description", content: "Profesionální daňové poradenství pro firmy i jednotlivce." },
     ],
   }),
@@ -91,7 +91,7 @@ function HomePage() {
           <div className="lg:col-span-5">
             <img
               src={portrait}
-              alt="Marek Valenta, daňový poradce"
+              alt="Andrea Baťková, daňová poradkyně"
               width={1024}
               height={1280}
               className="w-full aspect-[4/5] object-cover rounded-sm"

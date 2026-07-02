@@ -4,12 +4,12 @@ import portrait from "@/assets/portrait.jpg";
 const references = [
   {
     company: "Stavební společnost s.r.o.",
-    text: "S panem Valentou spolupracujeme třetím rokem. Jeho precizní přístup nám ušetřil desítky hodin práce a výrazně snížil daňové riziko.",
+    text: "S paní Baťkovou spolupracujeme třetím rokem. Její precizní přístup nám ušetřil desítky hodin práce a výrazně snížil daňové riziko.",
     author: "Petr Svoboda, jednatel",
   },
   {
     company: "TechFlow a.s.",
-    text: "Profesionální, rychlý a vždy dobře informovaný. Doporučuji každému, kdo potřebuje spolehlivého daňového poradce.",
+    text: "Profesionální, rychlá a vždy dobře informovaná. Doporučuji každému, kdo potřebuje spolehlivou daňovou poradkyni.",
     author: "Lenka Nováková, CFO",
   },
   {
@@ -28,10 +28,10 @@ const experience = [
 export const Route = createFileRoute("/o-mne")({
   head: () => ({
     meta: [
-      { title: "O mně — Marek Valenta" },
-      { name: "description", content: "Poznejte svého daňového poradce. Reference, zkušenosti a přístup." },
-      { property: "og:title", content: "O mně — Marek Valenta" },
-      { property: "og:description", content: "Poznejte svého daňového poradce. Reference, zkušenosti a přístup." },
+      { title: "O mně — Andrea Baťková" },
+      { name: "description", content: "Poznejte svou daňovou poradkyni. Reference, zkušenosti a přístup." },
+      { property: "og:title", content: "O mně — Andrea Baťková" },
+      { property: "og:description", content: "Poznejte svou daňovou poradkyni. Reference, zkušenosti a přístup." },
     ],
   }),
   component: AboutPage,
@@ -46,7 +46,7 @@ function AboutPage() {
           <div className="lg:col-span-5">
             <img
               src={portrait}
-              alt="Marek Valenta, daňový poradce"
+              alt="Andrea Baťková, daňová poradkyně"
               width={1024}
               height={1280}
               className="w-full aspect-[4/5] object-cover rounded-sm"
@@ -56,18 +56,18 @@ function AboutPage() {
           <div className="lg:col-span-7">
             <span className="text-brand-accent font-medium uppercase tracking-widest text-sm">O mně</span>
             <h1 className="text-5xl lg:text-6xl font-serif leading-tight mt-4 mb-8 text-balance">
-              Marek Valenta, <br />
-              <span className="italic text-brand-accent">daňový poradce</span>
+              Andrea Baťková, <br />
+              <span className="italic text-brand-accent">daňová poradkyně</span>
             </h1>
             <div className="space-y-6 text-lg text-brand-primary/70 leading-relaxed max-w-2xl">
               <p>
-                Věřím, že daňové poradenství není jen o číslech, ale především o klidu a jistotě mých klientů. Specializuji se na komplexní správu daní pro firmy, živnostníky i jednotlivce.
+                Věřím, že daňové poradenství není jen o číslech, ale především o klidu a jistotě mých klientů. Specializuji se na komplexní správu daní pro firmy, živnostníky i jednotlivce. Jako daňová poradkyně hledám vždy nejlepší cestu.
               </p>
               <p>
                 Mým cílem je najít optimální řešení, které je v souladu se zákonem a zároveň ekonomicky výhodné. Díky dlouholeté praxi v oboru dokážu předvídat rizika a navrhovat strategie na míru.
               </p>
               <p>
-                Jsem členem Komory daňových poradců ČR a pravidelně se vzdělávám v oblasti mezinárodního zdanění a firemních restrukturalizací.
+                Jsem členkou Komory daňových poradců ČR a pravidelně se vzdělávám v oblasti mezinárodního zdanění a firemních restrukturalizací.
               </p>
             </div>
           </div>
