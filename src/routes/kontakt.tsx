@@ -6,8 +6,8 @@ const contactDetails = [
   {
     icon: Mail,
     label: "Email",
-    value: "valenta@danovy-expert.cz",
-    href: "mailto:valenta@danovy-expert.cz",
+    value: "batkova@danovy-expert.cz",
+    href: "mailto:batkova@danovy-expert.cz",
   },
   {
     icon: Phone,
@@ -32,10 +32,10 @@ const contactDetails = [
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
     meta: [
-      { title: "Kontakt — Marek Valenta" },
-      { name: "description", content: "Kontaktujte daňového poradce Marka Valenty. Poptávkový formulář, e-mail a telefon." },
-      { property: "og:title", content: "Kontakt — Marek Valenta" },
-      { property: "og:description", content: "Kontaktujte daňového poradce Marka Valenty." },
+      { title: "Kontakt — Andrea Baťková" },
+      { name: "description", content: "Kontaktujte daňovou poradkyni Andreu Baťkovou. Poptávkový formulář, e-mail a telefon." },
+      { property: "og:title", content: "Kontakt — Andrea Baťková" },
+      { property: "og:description", content: "Kontaktujte daňovou poradkyni Andreu Baťkovou." },
     ],
   }),
   component: ContactPage,

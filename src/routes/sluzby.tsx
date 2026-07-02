@@ -58,9 +58,9 @@ const pricingPlans = [
 export const Route = createFileRoute("/sluzby")({
   head: () => ({
     meta: [
-      { title: "Služby a ceník — Marek Valenta" },
+      { title: "Služby a ceník — Andrea Baťková" },
       { name: "description", content: "Nabídka daňových služeb a transparentní ceník. Daňová přiznání, účetnictví, poradenství a audit." },
-      { property: "og:title", content: "Služby a ceník — Marek Valenta" },
+      { property: "og:title", content: "Služby a ceník — Andrea Baťková" },
       { property: "og:description", content: "Nabídka daňových služeb a transparentní ceník." },
     ],
   }),
