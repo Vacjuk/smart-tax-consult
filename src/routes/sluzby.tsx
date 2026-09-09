@@ -24,7 +24,7 @@ const services = [
   },
   {
     number: "04",
-    title: "Audit & revize",
+    title: "Audit a revize",
     description:
       "Nezávislé prověření hospodaření, interní kontrolní systémy, due diligence při akvizicích a identifikace rizik v účetních procesech.",
     price: "Individuálně",
