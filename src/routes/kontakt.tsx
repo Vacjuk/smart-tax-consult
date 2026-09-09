@@ -6,8 +6,8 @@ const contactDetails = [
   {
     icon: Mail,
     label: "Email",
-    value: "batkova@danovy-expert.cz",
-    href: "mailto:batkova@danovy-expert.cz",
+    value: "vanek.martin@danovy-expert.cz",
+    href: "mailto:vanek.martin@danovy-expert.cz",
   },
   {
     icon: Phone,
