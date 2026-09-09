@@ -55,7 +55,7 @@ function ContactPage() {
               <span className="italic text-brand-accent">vaši situaci</span>
             </h1>
             <p className="text-lg text-brand-primary/70 mb-12 leading-relaxed">
-              Zanechte mi vzkaz a já se vám ozvu zpět do 24 hodin s návrhem dalšího postupu.
+              Zanechte mi vzkaz a já se vám ozvu zpět do 48 hodin s návrhem dalšího postupu.
             </p>
 
             <div className="space-y-6">
