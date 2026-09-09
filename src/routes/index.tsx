@@ -133,7 +133,7 @@ function HomePage() {
       {/* Pricing */}
       <section className="py-24 bg-brand-surface">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-serif text-center mb-16">Transparentní ceník</h2>
+          <h2 className="text-4xl font-serif text-center mb-16">Ceník</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan) => (
               <div
